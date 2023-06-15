@@ -20,35 +20,32 @@
       <div class="card">
         <div class="card-body">
       <div class="row">
-        <div class="col-2">Stockholm</div>
-        <div class="col-2">London</div>
-        <div class="col-2">Kiev</div>
+        <div class="col-3" id="stockholm">Stockholm</div>
+        <div class="col-3">London</div>
+        <div class="col-3">Kiev</div>
       </div>
       <br />
       <h1 id="city"></h1>
 
       <div class="row g-3">
-        <div class="col-4">
         
-            <form>
+        <div class="col-4">
+              <form>   
              
           <input type="text" class="form-control" placeholder="For a week" />
-        </div>
+          </div>
         <div class="col-4">
          
           <input type="text" class="form-control" placeholder="For 10 days" />
-        </div>
+    </div>
         <div class="col-4">
           
-          <input
-            type="text"
-            class="form-control"
-            placeholder="For one month"
-                   /> </div>
+          <input  type="text" class="form-control" placeholder="For one month"/>
+        </div>
                    </form>
                  
                    </div>
-                   </div>
+                   
                    <br>
   <div class="row">
         <div class="col-6">
@@ -66,24 +63,31 @@
           </form>
         
       </div>            
-           
+    </br>
             <h3> May 4, Thursday</h3>
               
 
            <div class="row">
             <div class="col-5">
-               
+               <div class="d-flex weather-temperature">
+  <img src="" 
+  alt="Clear" 
+  id="icon" 
+/>
               <span class="temperature" id="temperature"> 15</span
-                ><span class="units">°C</span>
+                ><span class="units">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a></span>
           </div>
-                     
-         <div class="col-4">
+                </div>     
+         <div class="col-3">
           Wind <span id="wind"> 2.7</span> m/s 
 <br>
 Humidity <span id="humidity"> 66% </span>
 </div>
 </div>
    </div>
+     </div>
+     </div>
    <a href="https://github.com/olha-babik/weather-app">Open-source code</a>
    <script src="src/index.js"></script>
       </body>
