@@ -24,6 +24,7 @@ h3 {
 }
 .units {
   position: relative;
+  margin: 20px auto;
 }
 .card {
   border: 1px solid #dadde1;
@@ -31,16 +32,19 @@ h3 {
   margin: 20px auto;
   border-radius: 10px;
   max-width: 600px;
+  background: linear-gradient(
+    44.8deg,
+    rgba(255, 136, 102, 0.67) -53.1%,
+    rgba(255, 221, 136, 0.28) 49%
+  );
 }
 .temperature {
   color: rgb(33, 33, 33);
   font-size: 56px;
   font-weight: 400;
   line-height: 1;
+  margin: 20px auto;
 }
-.col-1 {
-  margin: 0 0 20px 50px;
-}
-.col-6 {
-  margin: 0 0 0 0px;
+.col-5 {
+  margin: 20px auto;
 }
