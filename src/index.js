@@ -55,13 +55,12 @@ function displayWeatherCondition(response) {
   celsiusTemperature = response.data.main.temp;
 }
 
-function search(event) {
-  event.preventDefault();
+function search(city) {
   let apiKey = "a0594785269187bedc0d136b83b28dc4";
-  let city = document.querySelector("#search-text-input").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
+
 function convertToFahrenheit(event) {
   event.preventDefault();
 
@@ -73,17 +72,21 @@ function convertToFahrenheit(event) {
 }
 
 function convertToCelsius(event) {
-  event.preventDefault();
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search-text-input");
+  search(cityInputElement.value);
+}
 
 let celsiusTemperature = null;
 
 let form = document.querySelector("#search-city");
-form.addEventListener("submit", search);
+form.addEventListener("submit", handleSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
@@ -91,4 +94,4 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-serch("New York");
+search("New York");
